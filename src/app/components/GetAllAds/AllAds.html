@@ -1,0 +1,30 @@
+<div class="container">
+    <hr>
+    <div>
+        <div class="col-md-3">
+            <label>Search</label>
+            <input type="text" #search name="search" class="form-control" (keyup)="0" >
+        </div>
+        
+        <table class="table">
+            <tbody>
+                <tr>
+                    <th>Name</th>
+                    <th>Category</th>
+                    <th>Price</th>
+                    <th>Description</th>
+                    <th>Actions</th>
+                </tr>
+                <tr *ngFor="let prod of advertises ">
+                    <td>{{prod.title}}</td>
+                    <td>{{prod.name}}</td>
+                    <td>{{prod.category}}</td>
+                    <td>{{prod.description}}</td>
+                    <td><button (click)="DeleteAd(prod)">delete</button>
+                    <button  type="submit" (click)="editobject(prod)">edit</button></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+</div>
